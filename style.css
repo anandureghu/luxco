@@ -1,152 +1,112 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-
-nav{
+body{
     background-color: #171717;
-    padding: 30px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
-    align-items: center;
-    border-bottom: 2px solid #353434;
-    position: relative;   
-}
-
-.nav-logo{
-    cursor: pointer;
-}
-
-.nav-items ul{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    list-style: none;
-    text-align: center;
-    justify-self: end;
-}
-
-.nav-item{
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    color: white;
-
-}
-
-.nav-item:hover{
-    color: crimson;
-}
-
-.nav-item-btn{
-    background-color: crimson;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-    outline: none;
-}
-
-.nav-item-btn:hover{
-    background-color: transparent;
-    padding: 8px 16px;
-    border: 3px solid crimson;
-    color: white;
-}
-
-header{
-    background-color: #171717;
-    height: 100vh;
-    position: relative;
 }
 
 .header-main{
- position: absolute;
- top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 250%;
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 50px;
+    justify-items: center;
+    align-items: center;
 }
+
+.header-content{
+    padding: 50px;
+    justify-self: center;
+    letter-spacing: 1.1;
+    line-height: 1.5;
+    margin-left: 50px;
+}
+
+.header-content p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff9d;
+}
+
+
+.header-img{
+    justify-self: center;
+    text-align: center;
+}
+
+.header-img img{
+    text-align: center;
+    width: 50%;
+}
+
+button{
+    background-color: crimson;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    
+}
+
+button a{
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    
+}
+
+button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #E8C21A;
+    transition: all 0.35s;
+    border-radius: 6px;
+}
+
+button:hover a{
+    color: #171717;
+    z-index: 2;
+    transition: all 0.3s
+}
+
+button:hover:after{
+    width: 100%;
+    color: #171717;
+    transition: all 0.35s;
+}
+
 
 @media screen and (max-width:928px){
 
-    body{
-        font-size: 13px;
+    .header-content h1{
+        font-size: 2.5rem;
     }
 
-    .nav-items ul{
-        display: grid;
-        grid-template-columns: auto;
-        position: absolute;
-        left: 0;
-        top: -500;
-        /* bottom: 100%; */
-        /* opacity: 0; */
-        justify-items: center;
-        align-items: center;
-        width: 100vw;
-        background-color: #171717;
-        z-index: 1;
-        transition: all 0.3s ease-in;
+    .header-img{
+        display: none;
     }
 
-    .nav-item{
-        display: table;
-        background-color: #171717;
-        color: white;
-        width: 100vw;
-        line-height: 80px;
-        transition: all 0.3s ease;
-    }
-    .nav-item:hover{
-        background-color: crimson;
-        color: white;
+    .header-main{
+        background-image: linear-gradient(rgba(23,23,23,0.8), rgba(23,23,23, 1)), url("sky rocket.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
-    .nav-item-btn{
-        border: 2px solid crimson;
+    .header-main{
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .nav-items.active ul{
-        top: 100;
-        opacity: 1;
-        left: 0;
-        transition: all 0.3s ease-out;
+    .header-content{
+        padding: 10px;
+        margin-left: 0px;
     }
-    
-    .mobile-menu{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 50;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    .mobile-menu .bar{
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        display: block;
-        margin: 5px 0px;
-        transition: all 0.3s ease;
-    }
-    
-    
-    .mobile-menu.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    
-    .mobile-menu.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .mobile-menu.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-
 }
-
-
