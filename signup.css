@@ -8,6 +8,7 @@
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     color: #171717;
+    display: none;
 }
 
 .signup-content{
@@ -82,6 +83,16 @@ transform: translate(-50%, -50%);
     border-radius: 3px;
 }
 
+.signup-form input.error{
+    border: 1px solid crimson;
+    box-shadow: 0px 1px 3px crimson;
+}
+
+.signup-form input.valid{
+    border: 1px solid green;
+    box-shadow: 0px 1px 3px green;
+}
+
 .form-validation p{
     color: crimson;
     font-size: 0.75rem;
@@ -90,7 +101,7 @@ transform: translate(-50%, -50%);
     display: none;
 }
 
-.signup-form a{
+.signup-form .signup-button{
     background-color: crimson;
     color: white;
     text-decoration: none;
@@ -101,9 +112,12 @@ transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 5px;
     font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.signup-form a:hover{
+.signup-form .signup-button:hover{
     background-color: #E8C21A;
     color: #171717;
     transition: all 0.3s ease-out;

@@ -36,7 +36,7 @@ body{
     width: 50%;
 }
 
-button{
+.header-content button{
     background-color: crimson;
     color: white;
     font-size: 1.2rem;
@@ -50,7 +50,7 @@ button{
     
 }
 
-button a{
+.header-content button a{
     position: relative;
     z-index: 2;
     text-decoration: none;
@@ -58,7 +58,7 @@ button a{
     
 }
 
-button:after{
+.header-content button:after{
     position: absolute;
     content: "";
     top: 0;
@@ -70,13 +70,13 @@ button:after{
     border-radius: 6px;
 }
 
-button:hover a{
+.header-content button:hover a{
     color: #171717;
     z-index: 2;
     transition: all 0.3s
 }
 
-button:hover:after{
+.header-content button:hover:after{
     width: 100%;
     color: #171717;
     transition: all 0.35s;
