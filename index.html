@@ -8,12 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link rel="icon" href="favico.svg">
 
     <title>LUXCO - Luxco allows you to fully automate your bussiness so you can focus on whats important</title>
 
-    <link rel="stylesheet" href="nav.css">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <header>
@@ -48,6 +52,43 @@
             </div>
         </div>
     </header>
+
+    <section class="signup-section">
+        <div class="signup-content">
+            <span class="signup-close"><i class="fas fa-times"></i></span>
+            <div class="signup-left">
+                <img src="toTheMoon.svg" alt="">
+            </div>
+            <div class="signup-right">
+                <h1>Get started with us today! create your account by filling out the information below</h1>
+                <form action="" class="signup-form">
+                    <div class="form-validation">
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-validation">
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-validation">
+                        <input type="password" id="password" name="password" placeholder="Enter Your Password">
+                        <p>Error Message</p>
+                    </div>
+
+                    <div class="form-validation">
+                        <input type="password" id="password2" name="password" placeholder="Confirm Your Password">
+                        <p>Error Message</p>
+                    </div>
+
+                    <a href="" type="submit">SIGN UP</a>
+                </form>
+
+                <p class="login">Already have an account? <a href="">LOGIN</a></p>
+            </div>
+        </div>
+    </section>
     
     <script src="app.js"></script>
 </body>
